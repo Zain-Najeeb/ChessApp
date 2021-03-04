@@ -7,13 +7,8 @@ abstract class ChessPiece {
     public static int checkLocation = -1;
     public static boolean doubleCheck  = false;
     public ChessPiece(int x, int y) {
-
             this.x = x;
             this.y = y;
-
-
-
-
     }
     public int getXCord() {
         return  x;
