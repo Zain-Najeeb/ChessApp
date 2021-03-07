@@ -8,9 +8,7 @@ public class MouseClicked {
             PieceHelper.PieceMoving(x, y, location, false);
 
         }
-
         boolean pieceClicked = false;
-
         if (location == -1) {
 
             int a = 0;
@@ -21,8 +19,6 @@ public class MouseClicked {
             }
 
             for (int i = a; i < b; i++) {
-
-
                     pieceClicked = PieceHelper.IsPieceClicked(x, y, i);
                     if (pieceClicked) {
 
@@ -30,12 +26,7 @@ public class MouseClicked {
 
                         break;
                     }
-
-
-
             }
-
-
 
             if (Main.oldX == x && Main.oldY == y && pieceClicked) {
 
@@ -44,14 +35,9 @@ public class MouseClicked {
                 Main.oldY = -1;
             }
 
-
             if (pieceClicked ) {
-
-
                 PieceHelper.getImage(location, x,y);
                 PieceHelper.PieceMoving(x, y, location, true);
-
-
                 Main.oldX = x;
                 Main.oldY = y;
 
@@ -62,13 +48,7 @@ public class MouseClicked {
                 Main.IsPieceClicked = false;
                 Main.oldX = -1;
                 Main.oldY = -1;
-
             }
-
-
         }
-
     }
-
-
 }

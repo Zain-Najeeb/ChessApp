@@ -157,7 +157,7 @@ public class Knight extends ChessPiece {
         }
     }
 
-    public static int Highlight(int x, int y, boolean forBlack) {
+    public static void Highlight(int x, int y, boolean forBlack) {
         ChessBoard c = ChessBoard.instance;
         PImage gKnight;
         c.fill(0, 255, 0);
@@ -174,7 +174,7 @@ public class Knight extends ChessPiece {
             c.image(gKnight, x, y);
 
         }
-        return 1;
+
 
     }
 

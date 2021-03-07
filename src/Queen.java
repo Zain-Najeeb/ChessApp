@@ -116,7 +116,7 @@ public class Queen extends ChessPiece {
     }
 
 
-    public static int Highlight(int x, int y, boolean forBlack) {
+    public static void Highlight(int x, int y, boolean forBlack) {
 
         ChessBoard c = ChessBoard.instance;
         PImage gQueen;
@@ -137,7 +137,7 @@ public class Queen extends ChessPiece {
         }
 
 
-        return 1;
+
     }
 
     public String getType() {

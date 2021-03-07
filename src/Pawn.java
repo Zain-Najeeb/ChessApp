@@ -1,7 +1,7 @@
 import processing.core.PImage;
 
 public class Pawn extends ChessPiece {
-    static ChessBoard graph = ChessBoard.instance;
+
     static boolean inCheck = false;
     static boolean draw = false;
     public Pawn(int x, int y) {
@@ -10,11 +10,11 @@ public class Pawn extends ChessPiece {
 
     }
 
-    public boolean getValidMoves(int x, int y, int location, int a, boolean ForCheque, int skip, boolean ForPinned) {
+    public boolean getValidMoves(int x, int y, int location, int a, boolean ForCheck, int skip, boolean ForPinned) {
         int pawnX = ChessBoard.Pieces[location].getXCord();
         int pawnY = ChessBoard.Pieces[location].getYCord();
 
-        if (!ForCheque) {
+        if (!ForCheck) {
 
             boolean forPinnedDiagonally = false;
             boolean forPinnedStraigth = false;
@@ -246,7 +246,7 @@ public class Pawn extends ChessPiece {
         }
 
 
-        if (ForCheque) {
+        if (ForCheck) {
             int b = 100;
 
             if (a == 10) {
@@ -386,7 +386,7 @@ public class Pawn extends ChessPiece {
         }
     }
 
-    public static int Highlight(int x, int y, boolean forBlack) {
+    public static  void Highlight(int x, int y, boolean forBlack) {
         ChessBoard c = ChessBoard.instance;
         PImage gPawn;
         c.fill(0, 255, 0);
@@ -402,7 +402,7 @@ public class Pawn extends ChessPiece {
         c.image(gPawn, x, y);
 
 
-        return 1;
+
     }
 
     public String getType() {

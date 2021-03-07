@@ -101,7 +101,7 @@ public class Bishop extends ChessPiece {
     }
 
 
-    public static int Highlight(int x, int y, boolean forBlack) {
+    public static void Highlight(int x, int y, boolean forBlack) {
 
         ChessBoard c = ChessBoard.instance;
         PImage gBishop;
@@ -122,7 +122,7 @@ public class Bishop extends ChessPiece {
         }
 
 
-        return 1;
+
     }
 
     public String getType() {

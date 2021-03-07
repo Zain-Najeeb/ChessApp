@@ -108,7 +108,7 @@ public class Rook extends ChessPiece {
 
     }
 
-    public static int Highlight(int x, int y, boolean forBlack) {
+    public static void Highlight(int x, int y, boolean forBlack) {
 
         ChessBoard c = ChessBoard.instance;
         PImage gRook;
@@ -129,7 +129,7 @@ public class Rook extends ChessPiece {
         }
 
 
-        return 1;
+
     }
 
     public String getType() {
